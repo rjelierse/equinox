@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file template.php
+ * This file provides theme functions to override or extend Drupal behavior.
+ *
+ * @author Raymond Jelierse
+ */
+
+function equinox_preprocess_page(&$variables) {
+  $theme_settings = array(
+      'carouselTimeout' => 10000,
+      'carouselTransitionSpeed' => 500,
+  );
+
+  theme_get_setting('', TRUE);
+
+  if (theme_get_setting('carousel_timeout') !== NULL) {
+    $theme_settings['carouselTimeout'] = intval(theme_get_setting('carousel_timeout'));
+  }
+
+  if (theme_get_setting('carousel_transition_speed') !== NULL) {
+    $theme_settings['carouselTransitionSpeed'] = intval(theme_get_setting('carousel_transition_speed'));
+  }
+
+  drupal_add_js(array('equinox' => $theme_settings), 'setting');
+  $variables['scripts'] = drupal_get_js();
+}
