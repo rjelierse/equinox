@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #content-content p {
     line-height: 1.3em;
-    margin-bottom: 1.3em;
+    margin-bottom: 10px;
 }
 #content-content ol,
 #content-content ul {
@@ -81,6 +81,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 #content-content table {
     width: 100%;
+    margin-bottom: 10px;
+}
+#content-content div.node span.submitted {
+    font-style: italic;
+    color: #666666;
+}
+#content-content div.node span.submitted a {
+    color: inherit;
 }
 #content h1 {
     font-size: 2em;
@@ -115,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 #content div.view div.views-row-item dd {
     margin-left: 10px;
     font-size: 0.8em;
-    color: #333333;
+    color: #666666;
 }
 /* Frontpage carousel */
 #content div.view-frontpage-carousel {
