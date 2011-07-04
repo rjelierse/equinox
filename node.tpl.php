@@ -76,23 +76,33 @@
   <div class="node-metadata-column grid_4 omega">
 <?php endif; ?>
 
-  <?php if (!empty($field_logo_rendered)): ?>
-    <?php print $field_logo_rendered; ?>
-  <?php endif; ?>
+    <div class="node-metadata-block">
+      <?php if (!empty($field_logo_rendered)): ?>
+        <?php print $field_logo_rendered; ?>
+      <?php endif; ?>
+    </div>
 
-  <?php if ($terms): ?>
-    <div class="terms terms-inline"><?php print $terms ?></div>
-  <?php endif;?>
+    <div class="node-metadata-block">
+      <?php if ($terms): ?>
+        <div class="terms terms-inline"><?php print $terms ?></div>
+      <?php endif;?>
+    </div>
 
-  <?php if (!empty($field_members_rendered)): ?>
-    <?php print $field_members_rendered; ?>
-  <?php endif; ?>
+    <div class="node-metadata-block">
+      <?php if (!empty($field_members_rendered)): ?>
+        <?php print $field_members_rendered; ?>
+      <?php endif; ?>
+    </div>
 
-  <?php if (!empty($field_committees_rendered)): ?>
-    <?php print $field_committees_rendered; ?>
-  <?php endif; ?>
+    <div class="node-metadata-block">
+      <?php if (!empty($field_committees_rendered)): ?>
+        <?php print $field_committees_rendered; ?>
+      <?php endif; ?>
+    </div>
 
-  <?php print $links; ?>
+    <div class="node-metadata-block">
+      <?php print $links; ?>
+    </div>
 
 <?php if ($sidebar): ?>
   </div>
