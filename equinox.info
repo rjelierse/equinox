@@ -15,8 +15,7 @@ scripts[] = scripts/carousel.js
 regions[content] = Content
 regions[header]  = Header
 regions[navigation] = Navigation
-regions[right] = Right column
-regions[center] = Center column
+regions[right] = Right sidebar
 regions[footer] = Footer
 
 features[] = Test

@@ -110,9 +110,6 @@ h1, h2, h3, h4, h5, h6 {
 #content div.view div.views-row-item {
     margin-bottom: 10px;
 }
-#content div.view-Smoelenboek div.views-row-item {
-    text-align: center;
-}
 #content div.view div.views-row-item dt {
     color: #003480;
 }
@@ -170,17 +167,66 @@ h1, h2, h3, h4, h5, h6 {
 #content div.view-frontpage-list h2.item-title a {
     text-decoration: none;
 }
-
-#center-column div.views-exposed-widget {
+/* Views metadata column */
+#content div.views-metadata-column {
+    font-size: 0.9em;
+}
+#content div.views-metadata-column div.views-block {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 10px !important;
+}
+#content div.views-metadata-column div.views-block:last-of-type {
+    border-bottom: 0;
+}
+/* Views admin links */
+#content div.views-metadata-column div.views-admin-links {
+    font-size: inherit;
+    margin: 0;
+}
+#content div.views-metadata-column div.views-admin-links ul.links {
+    margin-left: 0;
+}
+#content div.views-metadata-column div.views-admin-links li {
+    display: block;
+    padding: 0;
+    z-index: 1;
+}
+#content div.views-metadata-column div.views-admin-links li a {
+    color: inherit;
+}
+#content div.views-metadata-column div.views-admin-links-hover a,
+#content div.views-metadata-column div.views-admin-links:hover a {
+    color: inherit;
+}
+#content div.views-metadata-column div.views-admin-links-hover,
+#content div.views-metadata-column div.views-admin-links:hover {
+    background: transparent;
+}
+#content div.views-metadata-column div.views-admin-links a:before {
+    content: "";
+}
+#content div.views-metadata-column div.views-admin-links a:after {
+    content: "";
+}
+/* Views exposed forms */
+#content div.views-metadata-column div.views-exposed-widget {
     float: none;
     padding: 0;
     margin-bottom: 10px;
 }
-#center-column div.views-exposed-widget input.form-text {
+#content div.views-metadata-column div.views-exposed-widget label {
+    font-weight: normal;
+}
+#content div.views-metadata-column div.views-exposed-widget input.form-text {
     width: 200px !important;
 }
-#center-column div.views-exposed-widget input.form-submit {
+#content div.views-metadata-column div.views-exposed-widget input.form-submit {
     margin: 0;
+}
+/* Smoelenboek view */
+#content div.view-smoelenboek div.views-row-item {
+    text-align: center;
 }
 
 #right-column div.block {

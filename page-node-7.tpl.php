@@ -129,7 +129,7 @@
 
     <div id="content" class="clearfix">
       <!-- Content area -->
-      <div id="content-column" class="<?php print (empty($center) ? 'grid_12' : 'grid_8')?>">
+      <div id="content-column" class="grid_12">
         <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
         <?php if (!empty($help)): print $help; endif; ?>
         <div id="content-content">
@@ -137,13 +137,6 @@
         </div> <!-- /content-content -->
         <?php print $feed_icons; ?>
       </div>
-
-      <!-- Center column -->
-      <?php if (!empty($center)): ?>
-        <div id="center-column" class="grid_4">
-          <?php print $center; ?>
-        </div>
-      <?php endif; ?>
 
       <!-- Right column -->
       <?php if (!empty($right)): ?>
