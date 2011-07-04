@@ -83,6 +83,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin-bottom: 10px;
 }
+#content-content div.node div.content-photo {
+    margin-bottom: 10px;
+}
 #content-content div.node span.submitted {
     font-style: italic;
     color: #666666;

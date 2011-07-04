@@ -53,9 +53,15 @@
   <div class="node-content-column grid_8 alpha">
 <?php endif; ?>
 
-<?php if (!$page): ?>
-  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-<?php endif; ?>
+  <?php if (!$page): ?>
+    <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+  <?php endif; ?>
+
+  <?php if (!empty($field_photo_rendered)): ?>
+    <div class="content-photo">
+      <?php print $field_photo_rendered; ?>
+    </div>
+  <?php endif; ?>
 
   <?php if ($submitted): ?>
     <span class="submitted"><?php print $submitted ?></span>
