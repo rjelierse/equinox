@@ -7,11 +7,13 @@
  */
 
 function equinox_preprocess_page(&$variables) {
+  // Default JavaScript settings
   $theme_settings = array(
       'carouselTimeout' => 10000,
       'carouselTransitionSpeed' => 500,
   );
 
+  // Refresh theme settings
   theme_get_setting('', TRUE);
 
   if (theme_get_setting('carousel_timeout') !== NULL) {
@@ -25,7 +27,16 @@ function equinox_preprocess_page(&$variables) {
   drupal_add_js(array('equinox' => $theme_settings), 'setting');
   $variables['scripts'] = drupal_get_js();
   
+  // Create user menu
   $variables['user_menu'] = theme('links', menu_navigation_links('navigation'), array('id' => 'user-links-menu', 'class' => 'links user-links'));
+  
+  // Add check variable for administration section.
+  $variables['is_admin'] = (arg(0) == 'admin');
+  
+  // Remove breadcrumb if not in the administration section.
+  if (!$variables['is_admin']) {
+    $variables['breadcrumb'] = '';
+  }
 }
 
 function equinox_preprocess_node(&$variables) {
