@@ -27,6 +27,16 @@ function equinox_preprocess_page(&$variables) {
 }
 
 function equinox_preprocess_node(&$variables) {
+  // Remove translation links from the tree. We do not want them.
+  $node = $variables['node'];
+  if (empty($node->links)) $node->links = array();
+  foreach ($node->links as $id => $data) {
+    if (substr($id, 0, 16) === 'node_translation') {
+      unset($node->links[$id]);
+    }
+  }
+  $variables['links'] = !empty($node->links) ? theme('links', $node->links, array('class' => 'links inline')) : '';
+
   // Determine if we want to show an extra column next to the content
   if ($variables['teaser']) {
     $variables['sidebar'] = FALSE;
