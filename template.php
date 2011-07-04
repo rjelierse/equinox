@@ -24,6 +24,8 @@ function equinox_preprocess_page(&$variables) {
 
   drupal_add_js(array('equinox' => $theme_settings), 'setting');
   $variables['scripts'] = drupal_get_js();
+  
+  $variables['user_menu'] = theme('links', menu_navigation_links('navigation'), array('id' => 'user-links-menu', 'class' => 'links user-links'));
 }
 
 function equinox_preprocess_node(&$variables) {

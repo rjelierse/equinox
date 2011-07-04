@@ -22,11 +22,43 @@ h1, h2, h3, h4, h5, h6 {
 
 #sedge {
     background: #003480;
-    color: #ffffff;
+    color: #fff;
     height: 50px;
 }
     #logo {
         line-height: 48px;
+    }
+    #user-links {
+        float: right;
+        position: relative;
+        width: 120px;
+    }
+    #user-links #user-links-toggle {
+        display: block;
+        color: #fff;
+        padding: 0 16px;
+        background: url('../images/arrow-down-white.png') center right no-repeat;
+        line-height: 50px;
+        text-decoration: none;
+    }
+    #user-links #user-links-toggle.active,
+    #user-links #user-links-toggle:hover {
+        color: #003480;
+        background: url('../images/arrow-down-blue.png') center right #fff no-repeat;
+    }
+    #user-links #user-links-menu {
+        position: absolute;
+        z-index: 999;
+        left: -50px;
+        top: 50px;
+        right: -1px;
+        border: 1px solid #003480;
+        border-top: 0;
+        background: #fff;
+    }
+    #user-links #user-links-menu li {
+        display: block;
+        padding: 4px 10px;
     }
 
 #header {
@@ -40,11 +72,11 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 4px;
     }
     #header .messages.error {
-        background-color: #cc0000;
+        background-color: #c00;
     }
 
 #navigation-bar {
-    background: #333333;
+    background: #333;
 }
 #navigation-bar ul.primary-links {
     margin-top: 4px;
@@ -57,18 +89,18 @@ h1, h2, h3, h4, h5, h6 {
 #navigation-bar ul.primary-links a {
     display: block;
     padding: 12px !important;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 #navigation-bar ul.primary-links li a.active,
 #navigation-bar ul.primary-links li.active-trail a,
 #navigation-bar ul.primary-links li a:hover {
-    background: #ffffff;
-    color: #000000;
+    background: #fff;
+    color: #000;
 }
 
 #content {
-    background: #ffffff;
+    background: #fff;
     padding: 10px 0;
 }
 #content-content p {
@@ -88,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #content-content div.node span.submitted {
     font-style: italic;
-    color: #666666;
+    color: #666;
 }
 #content-content div.node span.submitted a {
     color: inherit;
@@ -123,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 #content div.view div.views-row-item dd {
     margin-left: 10px;
     font-size: 0.8em;
-    color: #666666;
+    color: #666;
 }
 /* Frontpage carousel */
 #content div.view-frontpage-carousel {
@@ -154,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 4px;
     background: url('../images/transparent-black.png');
     overflow: hidden;
-    color: #ffffff;
+    color: #fff;
     font-size: 0.9em;
 }
 #content div.view-frontpage-carousel div.view-content div.frontpage-banner-item div.information-panel h2.item-title,
@@ -238,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #right-column div.block h2 {
     background: #003480;
-    color: #ffffff;
+    color: #fff;
     font-size: 1.2em;
     padding: 0 4px;
     line-height: 30px;

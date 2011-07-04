@@ -11,6 +11,7 @@ stylesheets[all][] = css/960.css
 stylesheets[all][] = css/equinox.css
 
 scripts[] = scripts/carousel.js
+scripts[] = scripts/user-links.js
 
 regions[content] = Content
 regions[header]  = Header

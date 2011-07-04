@@ -94,7 +94,10 @@
     <div id="sedge-inner" class="container_16">
       <!-- User meu -->
       <?php if (!empty($user_menu)): ?>
+      <div id="user-links">
+        <a id="user-links-toggle" href="#"><?php print t('My Account'); ?></a>
         <?php print $user_menu; ?>
+      </div>
       <?php endif; ?>
 
       <!-- Site logo -->
