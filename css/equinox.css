@@ -103,26 +103,26 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     padding: 10px 0;
 }
-    #content-content p {
+    #content p {
         line-height: 1.3em;
         margin-bottom: 10px;
     }
-    #content-content ol,
-    #content-content ul {
+    #content ol,
+    #content ul {
         margin-left: 24px;
     }
-    #content-content table {
+    #content table {
         width: 100%;
         margin-bottom: 10px;
     }
-    #content-content div.node div.content-photo {
+    #content div.node div.content-photo {
         margin-bottom: 10px;
     }
-    #content-content div.node span.submitted {
+    #content div.node span.submitted {
         font-style: italic;
         color: #666;
     }
-    #content-content div.node span.submitted a {
+    #content div.node span.submitted a {
         color: inherit;
     }
     #content h1 {

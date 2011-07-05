@@ -37,6 +37,9 @@ function equinox_preprocess_page(&$variables) {
   if (!$variables['is_admin']) {
     $variables['breadcrumb'] = '';
   }
+  
+  // Multilanguage site logo
+  $variables['logo'] = sprintf('%s/images/logo-%s.png', url(drupal_get_path('theme', 'equinox')), $variables['language']->language);
 }
 
 function equinox_preprocess_node(&$variables) {
@@ -61,6 +64,9 @@ function equinox_preprocess_node(&$variables) {
     $variables['sidebar'] = TRUE;
   }
   elseif (!empty($variables['field_committees_rendered'])) {
+    $variables['sidebar'] = TRUE;
+  }
+  elseif (!empty($variables['field_website_rendered'])) {
     $variables['sidebar'] = TRUE;
   }
   elseif (!empty($variables['field_members_rendered'])) {
