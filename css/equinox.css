@@ -267,6 +267,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+/* General block settings */
 #right-column div.block {
     background: #e2e2e2;
     margin-bottom: 10px;
@@ -281,7 +282,15 @@ h1, h2, h3, h4, h5, h6 {
 #right-column div.block div.content {
     padding: 4px;
 }
+/* Banners block */
+#right-column #block-views-banners-block_1 {
+    background: none;
+}
+#right-column #block-views-banners-block_1 div.content {
+    padding: 0;
+}
 
+/* Footer */
 #footer {
     background: #e2e2e2;
     padding: 10px 0;
