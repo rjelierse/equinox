@@ -154,5 +154,7 @@
       <?php print $footer; ?>
     </div>
   </div>
+  
+  <?php print $closure; ?>
 </body>
 </html>
