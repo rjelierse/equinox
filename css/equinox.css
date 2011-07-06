@@ -73,10 +73,17 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 60px;
         padding: 4px;
         background-color: #fceba9;
+        border: 1px solid #f0c020;
         border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    #header .messages.warning {
+        background-color: #ffbe7d;
+        border: 1px solid #f60;
     }
     #header .messages.error {
         background-color: #c00;
+        border: 1px solid #f00;
     }
 
 #navigation-bar {
