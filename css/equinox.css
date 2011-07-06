@@ -300,6 +300,26 @@ h1, h2, h3, h4, h5, h6 {
 #right-column #block-views-banners-block_1 div.content {
     padding: 0;
 }
+/* Flickr PotW block */
+#right-column #block-flickr-potw {
+    position: relative;
+}
+#right-column #block-flickr-potw h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url('../images/transparent-green.png');
+}
+#right-column #block-flickr-potw div.content {
+    padding: 0;
+}
+#right-column #block-flickr-potw div.content a.photo-thumbnail img {
+    width: 220px !important;
+}
+#right-column #block-flickr-potw div.content p.photo-caption {
+    display: none;
+}
 
 /* Footer */
 #footer {
