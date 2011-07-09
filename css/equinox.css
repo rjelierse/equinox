@@ -320,6 +320,16 @@ label {
 #right-column #block-flickr-potw div.content p.photo-caption {
     display: none;
 }
+/* Facebook Like block */
+#right-column #block-facebook-like {
+    background: none;
+}
+#right-column #block-facebook-like h2 {
+    display: none;
+}
+#right-column #block-facebook-like div.content {
+    padding: 0;
+}
 
 /* Footer */
 #footer {
