@@ -52,6 +52,9 @@ function equinox_preprocess_node(&$variables) {
     }
   }
   $variables['links'] = !empty($node->links) ? theme('links', $node->links, array('class' => 'links inline')) : '';
+  
+  $variables['sidebar'] = FALSE;
+  $variables['social'] = FALSE;
 
   // Determine if we want to show an extra column next to the content
   if ($variables['teaser']) {
@@ -75,7 +78,16 @@ function equinox_preprocess_node(&$variables) {
   elseif (!empty($variables['field_logo_rendered'])) {
     $variables['sidebar'] = TRUE;
   }
-  else {
-    $variables['sidebar'] = FALSE;
+  elseif (!empty($variables['facebook_like_rendered'])) {
+    $variables['sidebar'] = TRUE;
+    $variables['social'] = TRUE;
+  }
+  elseif (!empty($variables['google_plusone_rendered'])) {
+    $variables['sidebar'] = TRUE;
+    $variables['social'] = TRUE;
+  }
+  elseif (!empty($variables['twitter_share_rendered'])) {
+    $variables['sidebar'] = TRUE;
+    $variables['social'] = TRUE;
   }
 }
