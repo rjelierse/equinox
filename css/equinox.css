@@ -228,6 +228,9 @@ label {
     #content div.node-metadata-column div.node-metadata-block:last-of-type {
         border-bottom: 0;
     }
+    #content div.node-metadata-column #node-social-facebook {
+        margin-bottom: 5px;
+    }
 /* Views admin links */
 #content div.views-metadata-column div.views-admin-links {
     font-size: inherit;
