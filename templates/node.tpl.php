@@ -74,14 +74,13 @@
 <?php if ($sidebar): ?>
   </div>
   <div class="node-metadata-column grid_4 omega">
-<?php endif; ?>
 
     <?php if (!empty($field_logo_rendered)): ?>
       <div class="node-metadata-block">
         <?php print $field_logo_rendered; ?>
       </div>
     <?php endif; ?>
-    
+
     <?php if (!empty($field_website_rendered)): ?>
       <div class="node-metadata-block">
         <?php print $field_website_rendered; ?>
@@ -112,7 +111,26 @@
       </div>
     <?php endif; ?>
 
-<?php if ($sidebar): ?>
+    <?php if ($social): ?>
+      <div class="node-metadata-block node-social-buttons">
+        <?php if (!empty($facebook_like_rendered)): ?>
+          <div id="node-social-facebook" class="node-social-button">
+            <?php print $facebook_like_rendered; ?>
+          </div>
+        <?php endif; ?>
+        <?php if (!empty($twitter_share_rendered)): ?>
+          <div id="node-social-twitter" class="node-social-button">
+            <?php print $twitter_share_rendered; ?>
+          </div>
+        <?php endif; ?>
+        <?php if (!empty($google_plusone_rendered)): ?>
+          <div id="node-social-google" class="node-social-button">
+            <?php print $google_plusone_rendered; ?>
+          </div>
+        <?php endif; ?>
+      </div>
+    <?php endif; ?>
+
   </div>
 <?php endif; ?>
 </div>

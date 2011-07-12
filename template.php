@@ -26,18 +26,18 @@ function equinox_preprocess_page(&$variables) {
 
   drupal_add_js(array('equinox' => $theme_settings), 'setting');
   $variables['scripts'] = drupal_get_js();
-  
+
   // Create user menu
   $variables['user_menu'] = theme('links', menu_navigation_links('navigation'), array('id' => 'user-links-menu', 'class' => 'links user-links'));
-  
+
   // Add check variable for administration section.
   $variables['is_admin'] = (arg(0) == 'admin');
-  
+
   // Remove breadcrumb if not in the administration section.
   if (!$variables['is_admin']) {
     $variables['breadcrumb'] = '';
   }
-  
+
   // Multilanguage site logo
   $variables['logo'] = sprintf('%s/images/logo-%s.png', url(drupal_get_path('theme', 'equinox')), $variables['language']->language);
 }
@@ -53,11 +53,10 @@ function equinox_preprocess_node(&$variables) {
   }
   $variables['links'] = !empty($node->links) ? theme('links', $node->links, array('class' => 'links inline')) : '';
 
-  // Determine if we want to show an extra column next to the content
-  if ($variables['teaser']) {
-    $variables['sidebar'] = FALSE;
-  }
-  elseif (!empty($variables['terms'])) {
+  $variables['sidebar'] = FALSE;
+  $variables['social'] = FALSE;
+
+  if (!empty($variables['terms'])) {
     $variables['sidebar'] = TRUE;
   }
   elseif (!empty($variables['links'])) {
@@ -75,7 +74,21 @@ function equinox_preprocess_node(&$variables) {
   elseif (!empty($variables['field_logo_rendered'])) {
     $variables['sidebar'] = TRUE;
   }
-  else {
+
+  if (!empty($variables['facebook_like_rendered'])) {
+    $variables['sidebar'] = TRUE;
+    $variables['social'] = TRUE;
+  }
+  elseif (!empty($variables['google_plusone_rendered'])) {
+    $variables['sidebar'] = TRUE;
+    $variables['social'] = TRUE;
+  }
+  elseif (!empty($variables['twitter_share_rendered'])) {
+    $variables['sidebar'] = TRUE;
+    $variables['social'] = TRUE;
+  }
+
+  if ($variables['teaser'] || !$variables['page'] || in_array($node->type, array('panel'))) {
     $variables['sidebar'] = FALSE;
   }
 }
