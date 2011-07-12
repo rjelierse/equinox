@@ -110,21 +110,6 @@
         <?php print $links; ?>
       </div>
     <?php endif; ?>
-    
-    <?php if ($social): ?>
-      <div class="node-metadata-block node-social-buttons">
-        <?php if (!empty($facebook_like_rendered)): ?>
-          <div id="node-social-facebook" class="node-social-button">
-            <?php print $facebook_like_rendered; ?>
-          </div>
-        <?php endif; ?>
-        <?php if (!empty($google_plusone_rendered)): ?>
-          <div id="node-social-google" class="node-social-button">
-            <?php print $google_plusone_rendered; ?>
-          </div>
-        <?php endif; ?>
-      </div>
-    <?php endif; ?>
 
     <?php if ($social): ?>
       <div class="node-metadata-block node-social-buttons">
