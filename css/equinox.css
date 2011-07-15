@@ -279,6 +279,7 @@ label {
 /* Smoelenboek view */
 #content div.view-smoelenboek div.views-row-item {
     text-align: center;
+    height: 200px;
 }
 
 /* General block settings */

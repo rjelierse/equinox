@@ -10,7 +10,7 @@
  */
 
 $counter = 1;
-$items_per_row = 4;
+$items_per_row =4;
 ?>
 <?php if (!empty($title)): ?>
   <h3 class="views-group-title"><?php print $title; ?></h3>
